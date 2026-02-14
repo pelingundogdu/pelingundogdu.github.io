@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : ""
+title                    : "-"
 title_separator          : "-"
 name                     : &name "Pelin Gundogdu"
 description              : &description "Pelin Gundogdu's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
@@ -23,8 +23,8 @@ repository               : "pelingundogdu/pelingundogdu.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  avatar           : "pelin.png"
+  name             : "Pelin Gundogdu"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
   location         : "Spain"
