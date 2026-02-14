@@ -5,6 +5,11 @@ var addressPoints = [
     -122.4075201
   ],
   [
+    "Intelligent Systems for Molecular Biology / European Conference on Computational Biology<br />Virtual; San Francisco, CA, USA",
+    37.7879363,
+    -122.4075201
+  ],
+  [
     "Talk 2 on Relevant Topic in Your Field<br />London School of Testing; London, UK",
     51.5074456,
     -0.1277653
