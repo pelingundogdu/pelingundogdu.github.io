@@ -5,9 +5,9 @@ var addressPoints = [
     -122.4075201
   ],
   [
-    "Intelligent Systems for Molecular Biology / European Conference on Computational Biology<br />Virtual; San Francisco, CA, USA",
-    37.7879363,
-    -122.4075201
+    "Intelligent Systems for Molecular Biology / European Conference on Computational Biology<br />Virtual; Virtual",
+    44.4939936,
+    11.3576917
   ],
   [
     "Talk 2 on Relevant Topic in Your Field<br />London School of Testing; London, UK",
