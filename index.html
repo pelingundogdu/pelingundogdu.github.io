@@ -46,9 +46,42 @@
     </style>
 </head>
 
-<body>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 font-sans antialiased min-h-screen flex flex-col transition-colors duration-200">
 
-    <h1>welcome v2!!</h1>
+    <!-- Header Module Slot -->
+    <div id="header-slot"></div>
 
+    <!-- Main Dynamic Content Container -->
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 py-8 md:py-12">
+        <div id="about-slot"></div>
+        <div id="publications-slot"></div>
+        <div id="activities-slot"></div>
+        <div id="projects-slot"></div>
+        <div id="notes-slot"></div>
+        <!-- <div id="teaching-slot"></div> -->
+    </main>
+
+    <!-- Global BibTeX Modal -->
+    <div id="bibtex-modal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 rounded-2xl max-w-xl w-full p-6 space-y-4 border border-slate-200 dark:border-slate-800 shadow-xl">
+            <div class="flex items-center justify-between">
+                <h3 class="font-bold text-slate-900 dark:text-white">BibTeX Citation</h3>
+                <button onclick="closeBibtexModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <pre id="bibtex-content" class="bg-slate-100 dark:bg-slate-950 p-4 rounded-xl text-xs font-mono text-slate-800 dark:text-slate-200 overflow-x-auto select-all"></pre>
+            <div class="flex justify-end gap-2">
+                <button id="copy-bibtex-btn" onclick="copyBibtex(this)" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-xs font-semibold transition-colors flex items-center gap-1.5">
+                    <i data-lucide="copy" class="w-4 h-4"></i>
+                    <span>Copy Citation</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loaders & Logic -->
+    <script src="js/loader.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
