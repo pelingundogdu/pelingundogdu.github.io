@@ -1,0 +1,191 @@
+<section id="tab-publications" class="tab-content space-y-6">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
+        <div>
+            <h1 class="text-2xl font-bold text-slate-900 dark:text-white">Academic Papers & Preprints</h1>
+            <p class="text-sm text-slate-500 mt-0.5">Selected peer-reviewed publications and manuscripts.</p>
+        </div>
+        
+        <div class="flex items-center gap-1 bg-slate-100 dark:bg-slate-900 p-1 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-medium">
+            <button onclick="filterPubs('all')" class="pub-filter-btn px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800 shadow-sm text-slate-900 dark:text-white" data-filter="all">All</button>
+            <button onclick="filterPubs('conference')" class="pub-filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" data-filter="conference">Conferences</button>
+            <button onclick="filterPubs('journal')" class="pub-filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" data-filter="journal">Journals</button>
+            <button onclick="filterPubs('preprint')" class="pub-filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" data-filter="preprint">Preprints</button>
+            <button onclick="filterPubs('consortium')" class="pub-filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" data-filter="consortium">Consortium</button>
+        </div>
+    </div>
+
+    <div class="space-y-4" id="publications-container">
+
+        <!-- Publication 3 IVAE-->
+        <article class="pub-card p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 transition-shadow hover:shadow-md" data-category="conference">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400">
+                    CMSB 2023 (Presenter)
+                </span>
+                <span class="text-xs font-mono text-slate-400">2023</span>
+            </div>
+
+            <h2 class="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">
+                Cell-Level Pathway Scoring Comparison with a Biologically Constrained Variational Autoencoder
+            </h2>
+
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+                <strong class="text-slate-900 dark:text-slate-200 font-semibold underline decoration-slate-400">Pelin Gundogdu</strong>, Miriam Payá-Milans, Inmaculada Alamo-Alvarez, Isabel A. Nepomuceno-Chamorro, Joaquin Dopazo, Carlos Loucera
+            </p>
+
+            <p class="text-xs text-slate-500 italic">International Conference on Computational Methods in Systems Biology (CMSB 2023)</p>
+
+            <p class="text-xs text-slate-500 italic font-semibold"><a href="https://doi.org/10.1007/978-3-031-42697-1_5" target="_blank" rel="noopener">https://doi.org/10.1007/978-3-031-42697-1_5</a></p>
+
+            <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-800/60 text-xs">
+                <button onclick="toggleAbstract('abs-ivae')" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center gap-1 font-medium">
+                    <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Abstract
+                </button>
+                <!-- <a href="#" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center gap-1 font-medium">
+                    <i data-lucide="download" class="w-3.5 h-3.5 text-indigo-500"></i> PDF
+                </a> -->
+                <button onclick="openBibtexModal('bib-ivae')" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center gap-1 font-medium">
+                    <i data-lucide="quote" class="w-3.5 h-3.5"></i> BibTeX
+                </button>
+                <a href="https://github.com/babelomics/ivae_scorer" target="_blank" rel="noopener" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center gap-1 font-medium">
+                    <i data-lucide="code" class="w-3.5 h-3.5 text-emerald-500"></i> Code
+                </a>
+            </div>
+
+            <div id="abs-ivae" class="hidden text-xs text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-950 p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 leading-relaxed">
+                <strong>Abstract:</strong> Unsupervised techniques are ubiquitous to study and understand the complex patterns that arise when analyzing genomic data at single-cell resolution. Particularly, unsupervised deep learning models provide state-of-the-art solutions for the most common tasks that arise when dealing with scRNA-seq data. However, the biological usefulness of these complex models is burdened by their black-box nature. To address such limitations several lines of research have emerged, from post hoc approximations to ante hoc modeling. In this work, we study the behavior of two biologically-constrained variational autoencoders (ante hoc modeling). On the one hand, we use a one-layer architecture where the constraints come from the signaling pathways, and, on the other hand, we propose a two-layer architecture following the recent trends in mechanistic models of signal transduction. We use the representations learned by the model as proxies of the signaling activity at the single-cell level. We check the performance of the scoring model using a known scRNA-seq public dataset with a clearly established ground truth. Although both models capture the relevant signals, the most pronounced differences are better captured by the one-layer architecture, while the two-layer design is able to learn more fine-grained features that can expose less prominent aspects of the data.
+            </div>
+        </article>
+
+        <!-- Publication 2 - Sigprimednet -->
+        <article class="pub-card p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 transition-shadow hover:shadow-md" data-category="journal">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-400">
+                    Journal of Biology by MDPI
+                </span>
+                <span class="text-xs font-mono text-slate-400">2023</span>
+            </div>
+
+            <h2 class="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">
+                SigPrimedNet: A Signaling-Informed Neural Network for scRNA-seq Annotation of Known and Unknown Cell Types
+            </h2>
+
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+                <strong class="text-slate-900 dark:text-slate-200 font-semibold underline decoration-slate-400">Pelin Gundogdu</strong>, Inmaculada Alamo, Isabel A. Nepomuceno-Chamorro, Joaquin Dopazo, Carlos Loucera
+            </p>
+
+            <p class="text-xs text-slate-500 italic">Journal of Biology (published by MDPI), Volume 12, Issue 4, Article Number 579</p>
+
+            <p class="text-xs text-slate-500 italic font-semibold"><a href="https://doi.org/10.3390/biology12040579" target="_blank" rel="noopener">https://doi.org/10.3390/biology12040579</a></p>
+
+            <!-- <p class="text-xs text-slate-500 italic">Journal Name: Biology (published by MDPI)</p>
+            <p class="text-xs text-slate-500 italic"></p>Special Issue: Machine Learning Applications in Biology
+            <p class="text-xs text-slate-500 italic"></p>Publication Date: April 10, 2023
+            <p class="text-xs text-slate-500 italic"></p>Volume & Issue: Volume 12, Issue 4
+            <p class="text-xs text-slate-500 italic"></p>Article Number: 579 -->
+
+            <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-800/60 text-xs">
+                <button onclick="toggleAbstract('abs-sigprimednet')" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center gap-1 font-medium">
+                    <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Abstract
+                </button>
+                <a href="https://www.mdpi.com/2079-7737/12/4/579/pdf?version=1681463878" target="_blank" rel="noopener" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center gap-1 font-medium">
+                    <i data-lucide="download" class="w-3.5 h-3.5 text-indigo-500"></i> PDF
+                </a>
+                <button onclick="openBibtexModal('bib-sigprimednet')" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center gap-1 font-medium">
+                    <i data-lucide="quote" class="w-3.5 h-3.5"></i> BibTeX
+                </button>
+                <a href="https://github.com/babelomics/sigprimednet" target="_blank" rel="noopener" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center gap-1 font-medium">
+                    <i data-lucide="code" class="w-3.5 h-3.5 text-emerald-500"></i> Code
+                </a>
+            </div>
+
+            <div id="abs-sigprimednet" class="hidden text-xs text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-950 p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 leading-relaxed">
+                <strong>Abstract:</strong> Single-cell RNA sequencing is increasing our understanding of the behavior of complex tissues or organs, by providing unprecedented details on the complex cell type landscape at the level of individual cells. Cell type definition and functional annotation are key steps to understanding the molecular processes behind the underlying cellular communication machinery. However, the exponential growth of scRNA-seq data has made the task of manually annotating cells unfeasible, due not only to an unparalleled resolution of the technology but to an ever-increasing heterogeneity of the data. Many supervised and unsupervised methods have been proposed to automatically annotate cells. Supervised approaches for cell-type annotation outperform unsupervised methods except when new (unknown) cell types are present. Here, we introduce SigPrimedNet an artificial neural network approach that leverages (i) efficient training by means of a sparsity-inducing signaling circuits-informed layer, (ii) feature representation learning through supervised training, and (iii) unknown cell-type identification by fitting an anomaly detection method on the learned representation. We show that SigPrimedNet can efficiently annotate known cell types while keeping a low false-positive rate for unseen cells across a set of publicly available datasets. In addition, the learned representation acts as a proxy for signaling circuit activity measurements, which provide useful estimations of the cell functionalities.
+            </div>
+        </article>
+
+
+        <!-- Publication 1 - Integrated -->
+        <article class="pub-card p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 transition-shadow hover:shadow-md" data-category="journal">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-400">
+                    Journal of BioData Mining
+                </span>
+                <span class="text-xs font-mono text-slate-400">2022</span>
+            </div>
+
+            <h2 class="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">
+                Integrating pathway knowledge with deep neural networks to reduce the dimensionality in single-cell RNA-seq data
+            </h2>
+
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+                <strong class="text-slate-900 dark:text-slate-200 font-semibold underline decoration-slate-400">Pelin Gundogdu</strong>, Carlos Loucera, Inmaculada Alamo-Alvarez, Joaquin Dopazo, Isabel A. Nepomuceno-Chamorro
+            </p>
+
+            <p class="text-xs text-slate-500 italic">Journal of BioData Mining, Volume 15, Article Number 1</p>
+
+            <p class="text-xs text-slate-500 italic font-semibold"><a href="https://doi.org/10.1186/s13040-021-00285-4" target="_blank" rel="noopener">https://doi.org/10.1186/s13040-021-00285-4</a></p>
+
+            <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-800/60 text-xs">
+                <button onclick="toggleAbstract('abs-integrated')" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center gap-1 font-medium">
+                    <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Abstract
+                </button>
+                <a href="https://link.springer.com/content/pdf/10.1186/s13040-021-00285-4.pdf" target="_blank" rel="noopener" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center gap-1 font-medium">
+                    <i data-lucide="download" class="w-3.5 h-3.5 text-indigo-500"></i> PDF
+                </a>
+                <button onclick="openBibtexModal('bib-integrated')" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center gap-1 font-medium">
+                    <i data-lucide="quote" class="w-3.5 h-3.5"></i> BibTeX
+                </button>
+            </div>
+
+            <div id="abs-integrated" class="hidden text-xs text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-950 p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 leading-relaxed">
+                <strong>Abstract:</strong>
+                <br>
+                <strong>Background,</strong> Single-cell RNA sequencing (scRNA-seq) data provide valuable insights into cellular heterogeneity which is significantly improving the current knowledge on biology and human disease. One of the main applications of scRNA-seq data analysis is the identification of new cell types and cell states. Deep neural networks (DNNs) are among the best methods to address this problem. However, this performance comes with the trade-off for a lack of interpretability in the results. In this work we propose an intelligible pathway-driven neural network to correctly solve cell-type related problems at single-cell resolution while providing a biologically meaningful representation of the data.
+                <br>
+                <strong>Results,</strong> In this study, we explored the deep neural networks constrained by several types of prior biological information, e.g. signaling pathway information, as a way to reduce the dimensionality of the scRNA-seq data. We have tested the proposed biologically-based architectures on thousands of cells of human and mouse origin across a collection of public datasets in order to check the performance of the model. Specifically, we tested the architecture across different validation scenarios that try to mimic how unknown cell types are clustered by the DNN and how it correctly annotates cell types by querying a database in a retrieval problem. Moreover, our approach demonstrated to be comparable to other less interpretable DNN approaches constrained by using protein-protein interactions gene regulation data. Finally, we show how the latent structure learned by the network could be used to visualize and to interpret the composition of human single cell datasets.
+                <br>
+                <strong>Conclusions,</strong> Here we demonstrate how the integration of pathways, which convey fundamental information on functional relationships between genes, with DNNs, that provide an excellent classification framework, results in an excellent alternative to learn a biologically meaningful representation of scRNA-seq data. In addition, the introduction of prior biological knowledge in the DNN reduces the size of the network architecture. Comparative results demonstrate a superior performance of this approach with respect to other similar approaches. As an additional advantage, the use of pathways within the DNN structure enables easy interpretability of the results by connecting features to cell functionalities by means of the pathway nodes, as demonstrated with an example with human melanoma tumor cells.
+            </div>
+        </article>
+
+        <!-- Publication consortium 1 - cell to cell -->
+        <article class="pub-card p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 transition-shadow hover:shadow-md" data-category="consortium">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 dark:bg-orange-950/60 text-orange-700 dark:text-orange-400">
+                    Journal of Molecular Systems Biology 
+                </span>
+                <span class="text-xs font-mono text-slate-400">2021</span>
+            </div>
+
+            <h2 class="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">
+                Cell-to-cell and type-to-type heterogeneity of signaling networks: insights from the crowd
+            </h2>
+
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+                Attila Gabor, Marco Tognetti, Alice Driessen, Jovan Tanevski, Baosen Guo, Wencai Cao, He Shen, Thomas Yu, Verena Chung, <strong class="text-slate-900 dark:text-slate-200 font-semibold underline decoration-slate-400">Single Cell Signaling in Breast Cancer DREAM Consortium members</strong>, Bernd Bodenmiller, Julio Saez-Rodriguez
+            </p>
+
+            <p class="text-xs text-slate-500 italic">Journal of Molecular Systems Biology, Volume 17</p>
+
+            <p class="text-xs text-slate-500 italic font-semibold"><a href="https://doi.org/10.15252/msb.202110402" target="_blank" rel="noopener">https://doi.org/10.15252/msb.202110402</a></p>
+
+            <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-800/60 text-xs">
+                <button onclick="toggleAbstract('abs-con0')" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center gap-1 font-medium">
+                    <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Abstract
+                </button>
+                <!-- <a href="https://link.springer.com/content/pdf/10.1186/s13040-021-00285-4.pdf" target="_blank" rel="noopener" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center gap-1 font-medium">
+                    <i data-lucide="download" class="w-3.5 h-3.5 text-indigo-500"></i> PDF
+                </a> -->
+                <button onclick="openBibtexModal('bib-con0')" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center gap-1 font-medium">
+                    <i data-lucide="quote" class="w-3.5 h-3.5"></i> BibTeX
+                </button>
+            </div>
+
+            <div id="abs-con0" class="hidden text-xs text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-950 p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 leading-relaxed">
+                <strong>Abstract:</strong> Recent technological developments allow us to measure the status of dozens of proteins in individual cells. This opens the way to understand the heterogeneity of complex multi-signaling networks across cells and cell types, with important implications to understand and treat diseases such as cancer. These technologies are, however, limited to proteins for which antibodies are available and are fairly costly, making predictions of new markers and of existing markers under new conditions a valuable alternative. To assess our capacity to make such predictions and boost further methodological development, we organized the Single Cell Signaling in Breast Cancer DREAM challenge. We used a mass cytometry dataset, covering 36 markers in over 4,000 conditions totaling 80 million single cells across 67 breast cancer cell lines. Through four increasingly difficult subchallenges, the participants predicted missing markers, new conditions, and the time-course response of single cells to stimuli in the presence and absence of kinase inhibitors. The challenge results show that despite the stochastic nature of signal transduction in single cells, the signaling events are tightly controlled and machine learning methods can accurately predict new experimental data.
+            </div>
+        </article>
+
+    </div>
+</section>

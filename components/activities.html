@@ -1,0 +1,125 @@
+<section id="tab-activities" class="tab-content space-y-6">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
+        <div>
+            <h1 class="text-2xl font-bold text-slate-900 dark:text-white">Activities</h1>
+            <p class="text-sm text-slate-500 mt-0.5">Participation and activities</p>
+        </div>
+        
+        <div class="flex items-center gap-1 bg-slate-100 dark:bg-slate-900 p-1 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-medium">
+            <button onclick="filterPubs2('all')" class="pub-filter-btn2 px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800 shadow-sm text-slate-900 dark:text-white" data-filter="all">All</button>
+            <button onclick="filterPubs2('conference')" class="pub-filter-btn2 px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" data-filter="conference">Conferences</button>
+            <button onclick="filterPubs2('workshop')" class="pub-filter-btn2 px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" data-filter="workshop">Workshop</button>
+            <button onclick="filterPubs2('secondment')" class="pub-filter-btn2 px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" data-filter="secondment">Secondment</button>
+            <button onclick="filterPubs2('other')" class="pub-filter-btn2 px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" data-filter="other">Other</button>
+        </div>
+    </div>
+
+    <div class="space-y-4" id="publications-container">
+
+        <!-- CMSB 2023 participant and presenter-->
+        <article class="pub-card2 p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 transition-shadow hover:shadow-md" data-category="conference">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400">
+                    Participant & Presenter
+                </span>
+                <span class="text-xs font-mono text-slate-400">September 13-15, 2023 · Luxembourg City, Luxembourg</span>
+            </div>
+            <h2 class="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">Conference on Computational Methods in Systems Biology (CMSB)</h2>
+            <p class="text-xs text-slate-500 italic">Cell-level pathway scoring comparison with a biologically constrained variational autoencoder</p>
+        </article>
+
+        <!-- JABI 2023 participant and presenter-->
+        <article class="pub-card2 p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 transition-shadow hover:shadow-md" data-category="conference">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400">
+                    Participant & Presenter (poster)
+                </span>
+                <span class="text-xs font-mono text-slate-400">July 3-5, 2023 · Seville, Spain</span>
+            </div>
+            <h2 class="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">Jornadas Andaluzas de Bioinformática (JABI)</h2>
+            <p class="text-xs text-slate-500 italic">Known and unknown cell types annotation with a signaling-informed neural network in scRNA-seq dataset</p>
+        </article>
+
+        <!-- Frontiers... 2022 participant and presenter-->
+        <article class="pub-card2 p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 transition-shadow hover:shadow-md" data-category="workshop">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-400">
+                    Participant & Presenter (poster)
+                </span>
+                <span class="text-xs font-mono text-slate-400">November 14-16, 2022 · Baeza, Spain</span>
+            </div>
+            <h2 class="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">Frontiers of Artificial Intelligence in Health Care</h2>
+            <p class="text-xs text-slate-500 italic">SigPrimedNet: a signaling-informed neural network for scRNA-seq annotation of known and unknown cell types</p>
+        </article>
+        
+        <!-- MLFPM Symposium 2022 participant and presenter-->
+        <article class="pub-card2 p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 transition-shadow hover:shadow-md" data-category="conference">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400">
+                    Participant & Presenter
+                </span>
+                <span class="text-xs font-mono text-slate-400">October 18-19, 2022 · Munich, Germany</span>
+            </div>
+            <h2 class="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">MLFPM Symposium</h2>
+            <p class="text-xs text-slate-500 italic">An implementation of a signaling-informed neural network to annotate known and unknown cell types with scRNA-seq data</p>
+        </article>
+
+        <!-- MAQC 2022 participant and presenter-->
+        <article class="pub-card2 p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 transition-shadow hover:shadow-md" data-category="conference">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400">
+                    Participant & Presenter
+                </span>
+                <span class="text-xs font-mono text-slate-400">September 26-27, 2022 · Virtual</span>
+            </div>
+            <h2 class="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">Massive Analysis and Quality Control Society (MAQC)</h2>
+            <p class="text-xs text-slate-500 italic">An implementation of a signaling-informed neural network to annotate known and unknown cell types with scRNA-seq data</p>
+        </article>
+
+        <!-- CBIO MINES ParisTech 2022 secondment-->
+        <article class="pub-card2 p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 transition-shadow hover:shadow-md" data-category="secondment">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-400">
+                    Secondment
+                </span>
+                <span class="text-xs font-mono text-slate-400">March 12, 2022 - June 16, 2022 · Paris, France</span>
+            </div>
+            <h2 class="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">The Centre for Computational Biology (CBIO) at Mines Paris - PSL </h2>
+        </article>
+
+        <!-- La noche 2021 participant and presenter-->
+        <article class="pub-card2 p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 transition-shadow hover:shadow-md" data-category="other">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 dark:bg-orange-950/60 text-orange-700 dark:text-orange-400">
+                    Participant & Presenter
+                </span>
+                <span class="text-xs font-mono text-slate-400">September 24, 2021 · Seville, Spain</span>
+            </div>
+            <h2 class="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">La Noche Europea de los Investigadores</h2>
+        </article>
+    
+        <!-- Roche 2021 secondment-->
+        <article class="pub-card2 p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 transition-shadow hover:shadow-md" data-category="secondment">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-400">
+                    Secondment
+                </span>
+                <span class="text-xs font-mono text-slate-400">August 23, 2021 - November 23, 2021 · Virtual</span>
+            </div>
+            <h2 class="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">Roche Diagnostics GmbH</h2>
+        </article>
+
+        <!-- ECCB 2021 participant and presenter-->
+        <article class="pub-card2 p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 transition-shadow hover:shadow-md" data-category="conference">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400">
+                    Participant & Presenter
+                </span>
+                <span class="text-xs font-mono text-slate-400">July 25-30, 2021 · Virtual</span>
+            </div>
+            <h2 class="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">Intelligent Systems for Molecular Biology / European Conference on Computational Biology (ISMB/ECCB)</h2>
+            <p class="text-xs text-slate-500 italic">Pathway-primed explainable neural network for scRNA-Seq data</p>
+        </article>
+
+    </div>
+</section>

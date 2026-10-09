@@ -1,0 +1,51 @@
+<header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 dark:bg-slate-950/80 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+        <!-- <a href="#about" onclick="switchTab('about')" class="font-bold text-lg tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+            <span class="bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 w-8 h-8 rounded-lg flex items-center justify-center font-mono text-sm font-semibold">PG</span>
+            <span>Pelin Gundogdu, Ph.D.</span>
+        </a> -->
+        <!-- <a href="" onclick="switchTab('about')" class="font-bold text-lg tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+            <span class="bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 w-8 h-8 rounded-lg flex items-center justify-center font-mono text-sm font-semibold">PG</span>
+            <span>Pelin Gundogdu, Ph.D.</span>
+        </a> -->
+        <div class="font-bold text-lg tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+            <span class="bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 w-8 h-8 rounded-lg flex items-center justify-center font-mono text-sm font-semibold">PG</span>
+            <span>Pelin Gundogdu, Ph.D.</span>
+        </div>
+        
+        <nav class="hidden md:flex items-center space-x-1 text-sm font-medium">
+            <button onclick="switchTab('about'); resetAllFilters();" id="nav-about" class="nav-btn px-3 py-2 rounded-md text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors text-indigo-600 font-semibold">
+                <i data-lucide="house" class="w-3.5 h-3.5 text-amber-500"></i>
+            </button>
+            <button onclick="switchTab('publications'); resetAllFilters();" id="nav-publications" class="nav-btn px-3 py-2 rounded-md text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors">Publications</button>
+            <button onclick="switchTab('activities'); resetAllFilters();" id="nav-activities" class="nav-btn px-3 py-2 rounded-md text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors">Activities</button>
+            <button onclick="switchTab('projects'); resetAllFilters();" id="nav-projects" class="nav-btn px-3 py-2 rounded-md text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors">Projects & Software</button>
+            <button onclick="switchTab('notes'); resetAllFilters();" id="nav-notes" class="nav-btn px-3 py-2 rounded-md text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors flex items-center gap-1.5">
+                <i data-lucide="lock" class="w-3.5 h-3.5 text-amber-500"></i> Notes
+            </button>
+            <!-- <button onclick="switchTab('teaching')" id="nav-teaching" class="nav-btn px-3 py-2 rounded-md text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors">Teaching & CV</button> -->
+        </nav>
+
+        <div class="flex items-center gap-2">
+            <button id="theme-toggle" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors">
+                <i data-lucide="moon" id="theme-icon-dark" class="w-5 h-5 hidden"></i>
+                <i data-lucide="sun" id="theme-icon-light" class="w-5 h-5"></i>
+            </button>
+            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="md:hidden p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-2 pb-4 space-y-1">
+        <button onclick="switchTab('about'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium">About</button>
+        <button onclick="switchTab('publications'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium">Publications</button>
+        <button onclick="switchTab('activities'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium">Activities</button>
+        <button onclick="switchTab('projects'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium">Projects & Software</button>
+        <button onclick="switchTab('notes'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium flex items-center justify-between">
+            <span>Protected Notes</span>
+            <i data-lucide="lock" class="w-4 h-4 text-amber-500"></i>
+        </button>
+        <!-- <button onclick="switchTab('teaching'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium">Teaching & CV</button> -->
+    </div>
+</header>

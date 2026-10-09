@@ -1,0 +1,50 @@
+<section id="tab-notes" class="tab-content space-y-6">
+    <div class="pb-4 border-b border-slate-200 dark:border-slate-800">
+        <h1 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <i data-lucide="lock" class="w-6 h-6 text-amber-500"></i> Project Related Steps and Guidelines
+        </h1>
+        <div class="flex justify-between items-center mb-4">
+
+            <p class="text-sm text-slate-500 mt-0.5">Super secret notes and instructions</p>
+
+            <!-- CALL relockNotes HERE -->
+            <button id='lock-button' onclick="relockNotes()" 
+            class="hidden px-3 py-1 bg-red-300 dark:bg-red-800 text-xs font-semibold rounded hover:bg-red-500 dark:hover:bg-red-600 transition-colors">
+                Lock Notes
+            </button>
+        </div>
+        
+    </div>
+
+    <!-- Password Lock Screen -->
+    <div id="notes-lock" class="p-8 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 text-center space-y-4 max-w-md mx-auto">
+        <div class="w-12 h-12 bg-amber-100 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 rounded-2xl flex items-center justify-center mx-auto">
+            <i data-lucide="key-round" class="w-6 h-6"></i>
+        </div>
+        <div>
+            <h2 class="font-bold text-slate-900 dark:text-white">Access Restricted</h2>
+            <p class="text-xs text-slate-500 mt-1">Enter your collaborator password to view these documents.</p>
+        </div>
+        <form onsubmit="unlockNotes(event)" class="space-y-3">
+            <input type="password" id="notes-pass" placeholder="Enter password (e.g. research2026)..." class="w-full px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 text-slate-900 dark:text-white">
+            <button type="submit" class="w-full py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-xl text-xs font-semibold transition-colors">
+                Unlock Content
+            </button>
+        </form>
+    </div>
+
+    <!-- Protected Content (Hidden by Default) -->
+     <div id="notes-content" class="hidden space-y-4">
+
+        <div class="p-4 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 rounded-xl text-xs text-emerald-800 dark:text-emerald-300 flex items-center gap-2">
+            <i data-lucide="check-circle" class="w-4 h-4 shrink-0"></i> Access Granted: Displaying project relates documents.
+        </div>
+        <div class="p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-2">
+            <span class="text-xs font-mono text-slate-400">TEMP</span>
+            <h3 class="font-bold text-slate-900 dark:text-white">TEMP</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                TEMP
+            </p>
+        </div>
+    </div>
+</section>
